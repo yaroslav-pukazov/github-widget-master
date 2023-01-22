@@ -1,0 +1,58 @@
+{
+  "name": "github-profile-card",
+  "version": "3.1.0",
+  "description": "Widget for presenting your GitHub profile on your website. Pure JavaScript.",
+  "main": "dist/gh-profile-card.min.js",
+  "engines": {
+    "yarn": ">= 2.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "24.9.0",
+    "@typescript-eslint/eslint-plugin": "2.17.0",
+    "@typescript-eslint/parser": "2.17.0",
+    "clean-webpack-plugin": "3.0.0",
+    "css-loader": "3.4.2",
+    "eslint": "6.8.0",
+    "eslint-config-prettier": "6.9.0",
+    "eslint-plugin-jest": "23.6.0",
+    "jest": "24.9.0",
+    "prettier": "1.19.1",
+    "sass": "1.25.0",
+    "sass-loader": "8.0.2",
+    "style-loader": "1.1.3",
+    "ts-jest": "24.3.0",
+    "ts-loader": "6.2.1",
+    "ts-node": "8.6.2",
+    "tslib": "1.10.0",
+    "typescript": "3.7.5",
+    "webpack": "4.41.5",
+    "webpack-cli": "3.3.10"
+  },
+  "scripts": {
+    "build": "WEBPACK_ENV=build webpack",
+    "build:check": "yarn build && yarn lint && yarn format:check && yarn test",
+    "dev": "WEBPACK_ENV=dev webpack --progress --colors --watch",
+    "lint": "yarn eslint . --ext .ts",
+    "format": "prettier --write {*,src/*,demo/*}",
+    "format:check": "prettier --check {*,src/*,demo/*}",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/piotrl/github-profile-card.git"
+  },
+  "keywords": [
+    "github",
+    "widget",
+    "vanilla",
+    "javascript",
+    "browser"
+  ],
+  "author": "Piotr Lewandowski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/piotrl/github-profile-card/issues"
+  },
+  "homepage": "https://github-profile.com/"
+}
